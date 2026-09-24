@@ -275,9 +275,9 @@ Module 4 includes software-based liveness verification prior to biometric face m
 
 > "Uploaded document images are automatically deleted 30 minutes after upload. Only the encrypted audit log record (decision, risk score, hashed identifiers) is retained for investigative purposes — no raw document image persists beyond the retention window. Login sessions auto-expire after 15 minutes of inactivity, and access tokens are never persisted in browser storage."
 
-### 1. 30-Minute Document Purge Policy
+### 1. 15-Minute Document Purge Policy
 SentinelAuth enforces a strict data minimization schedule balancing national border security investigative obligations with statutory privacy compliance:
-- **Automatic Background Purge (APScheduler)**: An asynchronous background daemon runs inside the FastAPI application lifecycle every 1–2 minutes, scanning the `document_files` registry for records exceeding 30 minutes of retention.
+- **Automatic Background Purge (APScheduler)**: An asynchronous background daemon runs inside the FastAPI application lifecycle every 1–2 minutes, scanning the `document_files` registry for records exceeding 15 minutes of retention.
 - **Physical File Destruction**: The underlying encrypted or raw image file on disk is securely removed using `os.remove`.
 - **Tombstone Audit Record**: The corresponding entry in `document_files` is marked with `deleted = True` and a `deleted_at` timestamp. The database row is kept as an evidentiary proof-of-destruction tombstone without persisting sensitive traveler biometric or document images.
 - **Investigative Audit Trail Preserved (`scan_records`)**: Under national border security protocol, the structured forensic record in `scan_records` (composite risk score, risk tier, OCR metadata, checksum logs, facial similarity metrics, and SHA-256 cryptographic hashes) is **permanently preserved**. Only binary image files are purged.
