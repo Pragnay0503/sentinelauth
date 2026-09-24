@@ -95,7 +95,7 @@ flowchart TD
 - **ICAO 9303 MRZ Engine**: Full TD1 (ID cards/visas - 3 lines × 30 chars) and TD3 (Passports - 2 lines × 44 chars) parsers. Validates document number, date of birth, expiry date, and composite check digits using official 7-3-1 weight polynomials.
 - **Indian National ID Parsers**:
   - **Aadhaar**: Extracts 12-digit UID, multi-line full name (e.g., `Thada Sai Pragnay`), DOB, gender, and full address from back side (`Thada Srinivas Reddy...`). Runs the Verhoeff algorithm.
-  - **PAN Card**: Resolves Indian Income Tax card fields including 10-character alphanumeric PAN (`HRRPR5877P`), applicant name, and father's name from line continuations under QR codes (`KAJA KARTHIKEYA REDDY`, `KAJA SRINIVASA REDDY`).
+  - **PAN Card**: Resolves Indian Income Tax card fields including 10-character alphanumeric PAN (`XXXXXXX`), applicant name, and father's name from line continuations under QR codes (`KAJA KARTHIKEYA REDDY`, `KAJA SRINIVASA REDDY`).
   - **Driving License, Voter ID (EPIC), and Visas**.
 
 ### 2. Document Validation & Watchlists (`backend/modules/document_validation/`)
@@ -137,12 +137,12 @@ SentinelAuth has been rigorously verified on all 5 user-provided identity docume
 
 | Test Document | Doc Type | Extracted ID / Details | Tampering Score | Face Match Confidence | Computed Risk Tier |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`aadhaar_thada_front.png`** | Aadhaar | `2254 1472 0908`<br>`Thada Sai Pragnay`<br>`05/03/2007`, `Male` | 0.22 (Low) | **95.42%** *(vs merged)* | **LOW (21/100)** |
+| **`aadhaar_thada_front.png`** | Aadhaar | `XXXXXX`<br>`Thada Sai Pragnay`<br>`05/03/2007`, `Male` | 0.22 (Low) | **95.42%** *(vs merged)* | **LOW (21/100)** |
 | **`aadhaar_thada_back.jpg`** | Aadhaar Back | Address: `Thada Srinivas Reddy, H.No 5-7-436...` | 0.05 (Clean) | N/A (Address card) | **LOW (10/100)** |
-| **`pan_kaja.png`** | PAN Card | `HRRPR5877P`<br>`KAJA KARTHIKEYA REDDY`<br>Father: `KAJA SRINIVASA REDDY` | 0.18 (Low) | N/A | **LOW (18/100)** |
+| **`pan_kaja.png`** | PAN Card | `XXXXXXXXX`<br>`KAJA KARTHIKEYA REDDY`<br>Father: `KAJA SRINIVASA REDDY` | 0.18 (Low) | N/A | **LOW (18/100)** |
 | **`aadhaar_srija.png`** | Aadhaar | `4838 0779 9767`<br>`Padigela Srija`<br>`26/11/2006`, `Female` | 0.20 (Low) | **36.58%** *(Cross-check vs Thada)* | **HIGH (72/100)** *(Face Mismatch)* |
-| **Tampered Passport Vector** | Passport | `L898902C`<br>Corrupted DOB Check Digit | 0.25 | N/A | **HIGH (65/100)** *(Checksum Fail)* |
-| **Watchlist Intercept** | Passport | `L898902C` + INTERPOL Red Notice | N/A | N/A | **CRITICAL (95/100)** *(Watchlist Hit)* |
+| **Tampered Passport Vector** | Passport | `XXXX`<br>Corrupted DOB Check Digit | 0.25 | N/A | **HIGH (65/100)** *(Checksum Fail)* |
+| **Watchlist Intercept** | Passport | `XXXX` + INTERPOL Red Notice | N/A | N/A | **CRITICAL (95/100)** *(Watchlist Hit)* |
 
 ---
 
