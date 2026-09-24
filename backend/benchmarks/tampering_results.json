@@ -1,0 +1,2112 @@
+{
+  "benchmark_name": "SentinelAuth Module 3 Forensic Tampering Detection Benchmark (Realistic Physical Capture)",
+  "timestamp": "2026-09-24T06:34:26Z",
+  "disclaimer": "Benchmarked against synthetically generated documents and tampering, not real forged government documents (which cannot be legally sourced for testing).",
+  "documents_evaluated": 48,
+  "clean_count": 24,
+  "tampered_count": 24,
+  "default_threshold": 40.0,
+  "default_metrics": {
+    "threshold": 40.0,
+    "threshold_normalized": 0.4,
+    "tp_correct": 2,
+    "wrong_reason": 4,
+    "fn_missed": 18,
+    "fp_clean": 7,
+    "tn_clean": 17,
+    "n_tampered": 24,
+    "n_clean": 24,
+    "total_flagged": 13,
+    "precision": 0.1538,
+    "precision_pct": 15.4,
+    "precision_ci95": [
+      4.3,
+      42.2
+    ],
+    "correct_recall": 0.0833,
+    "correct_recall_pct": 8.3,
+    "recall_ci95": [
+      2.3,
+      25.8
+    ],
+    "wrong_reason_rate_pct": 16.7,
+    "missed_rate_pct": 75.0,
+    "f1": 0.1081,
+    "f1_pct": 10.8,
+    "fpr": 0.2917,
+    "fpr_pct": 29.2,
+    "fpr_ci95": [
+      14.9,
+      49.2
+    ]
+  },
+  "doc_type_breakdown": {
+    "national_id_pan": {
+      "threshold": 40.0,
+      "threshold_normalized": 0.4,
+      "tp_correct": 0,
+      "wrong_reason": 0,
+      "fn_missed": 8,
+      "fp_clean": 0,
+      "tn_clean": 8,
+      "n_tampered": 8,
+      "n_clean": 8,
+      "total_flagged": 0,
+      "precision": null,
+      "precision_pct": "N/A (no flags)",
+      "precision_ci95": "N/A (no flags)",
+      "correct_recall": 0.0,
+      "correct_recall_pct": 0.0,
+      "recall_ci95": [
+        0.0,
+        32.4
+      ],
+      "wrong_reason_rate_pct": 0.0,
+      "missed_rate_pct": 100.0,
+      "f1": 0.0,
+      "f1_pct": 0.0,
+      "fpr": 0.0,
+      "fpr_pct": 0.0,
+      "fpr_ci95": [
+        0.0,
+        32.4
+      ]
+    },
+    "national_id_aadhaar": {
+      "threshold": 40.0,
+      "threshold_normalized": 0.4,
+      "tp_correct": 2,
+      "wrong_reason": 4,
+      "fn_missed": 2,
+      "fp_clean": 7,
+      "tn_clean": 1,
+      "n_tampered": 8,
+      "n_clean": 8,
+      "total_flagged": 13,
+      "precision": 0.1538,
+      "precision_pct": 15.4,
+      "precision_ci95": [
+        4.3,
+        42.2
+      ],
+      "correct_recall": 0.25,
+      "correct_recall_pct": 25.0,
+      "recall_ci95": [
+        7.1,
+        59.1
+      ],
+      "wrong_reason_rate_pct": 50.0,
+      "missed_rate_pct": 25.0,
+      "f1": 0.1904,
+      "f1_pct": 19.0,
+      "fpr": 0.875,
+      "fpr_pct": 87.5,
+      "fpr_ci95": [
+        52.9,
+        97.8
+      ]
+    },
+    "national_id_voter": {
+      "threshold": 40.0,
+      "threshold_normalized": 0.4,
+      "tp_correct": 0,
+      "wrong_reason": 0,
+      "fn_missed": 8,
+      "fp_clean": 0,
+      "tn_clean": 8,
+      "n_tampered": 8,
+      "n_clean": 8,
+      "total_flagged": 0,
+      "precision": null,
+      "precision_pct": "N/A (no flags)",
+      "precision_ci95": "N/A (no flags)",
+      "correct_recall": 0.0,
+      "correct_recall_pct": 0.0,
+      "recall_ci95": [
+        0.0,
+        32.4
+      ],
+      "wrong_reason_rate_pct": 0.0,
+      "missed_rate_pct": 100.0,
+      "f1": 0.0,
+      "f1_pct": 0.0,
+      "fpr": 0.0,
+      "fpr_pct": 0.0,
+      "fpr_ci95": [
+        0.0,
+        32.4
+      ]
+    }
+  },
+  "tamper_type_breakdown": {
+    "photo_swap": {
+      "total_samples": 6,
+      "correct_detected": 0,
+      "wrong_reason_flags": 1,
+      "missed": 5,
+      "detection_rate_pct": 0.0,
+      "ci95": [
+        0.0,
+        39.0
+      ],
+      "avg_score_pct": 13.6
+    },
+    "text_edit": {
+      "total_samples": 12,
+      "correct_detected": 2,
+      "wrong_reason_flags": 2,
+      "missed": 8,
+      "detection_rate_pct": 16.7,
+      "ci95": [
+        4.7,
+        44.8
+      ],
+      "avg_score_pct": 22.8
+    },
+    "recompression": {
+      "total_samples": 6,
+      "correct_detected": 0,
+      "wrong_reason_flags": 1,
+      "missed": 5,
+      "detection_rate_pct": 0.0,
+      "ci95": [
+        0.0,
+        39.0
+      ],
+      "avg_score_pct": 11.1
+    }
+  },
+  "module_summary": {
+    "module_totals": {
+      "ela": 2.279,
+      "photo": 0.0,
+      "exif": 0.0,
+      "text": 0.0,
+      "field_forensics": 6.5
+    },
+    "module_non_zero_counts": {
+      "ela": 48,
+      "photo": 0,
+      "exif": 0,
+      "text": 0,
+      "field_forensics": 13
+    },
+    "tamper_module_catches": {
+      "photo_swap": {
+        "ela": 6,
+        "photo": 0,
+        "exif": 0,
+        "text": 0,
+        "field_forensics": 1
+      },
+      "text_edit": {
+        "ela": 12,
+        "photo": 0,
+        "exif": 0,
+        "text": 0,
+        "field_forensics": 4
+      },
+      "recompression": {
+        "ela": 6,
+        "photo": 0,
+        "exif": 0,
+        "text": 0,
+        "field_forensics": 1
+      }
+    },
+    "zero_contribution_modules": [
+      "photo",
+      "exif",
+      "text"
+    ]
+  },
+  "stamp_diagnostics": [],
+  "threshold_sweep": [
+    {
+      "threshold": 0.0,
+      "threshold_normalized": 0.0,
+      "tp_correct": 2,
+      "wrong_reason": 22,
+      "fn_missed": 0,
+      "fp_clean": 24,
+      "tn_clean": 0,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 48,
+      "precision": 0.0417,
+      "precision_pct": 4.2,
+      "precision_ci95": [
+        1.2,
+        14.0
+      ],
+      "correct_recall": 0.0833,
+      "correct_recall_pct": 8.3,
+      "recall_ci95": [
+        2.3,
+        25.8
+      ],
+      "wrong_reason_rate_pct": 91.7,
+      "missed_rate_pct": 0.0,
+      "f1": 0.0556,
+      "f1_pct": 5.6,
+      "fpr": 1.0,
+      "fpr_pct": 100.0,
+      "fpr_ci95": [
+        86.2,
+        100.0
+      ]
+    },
+    {
+      "threshold": 10.0,
+      "threshold_normalized": 0.1,
+      "tp_correct": 2,
+      "wrong_reason": 5,
+      "fn_missed": 17,
+      "fp_clean": 8,
+      "tn_clean": 16,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 15,
+      "precision": 0.1333,
+      "precision_pct": 13.3,
+      "precision_ci95": [
+        3.7,
+        37.9
+      ],
+      "correct_recall": 0.0833,
+      "correct_recall_pct": 8.3,
+      "recall_ci95": [
+        2.3,
+        25.8
+      ],
+      "wrong_reason_rate_pct": 20.8,
+      "missed_rate_pct": 70.8,
+      "f1": 0.1025,
+      "f1_pct": 10.2,
+      "fpr": 0.3333,
+      "fpr_pct": 33.3,
+      "fpr_ci95": [
+        18.0,
+        53.3
+      ]
+    },
+    {
+      "threshold": 20.0,
+      "threshold_normalized": 0.2,
+      "tp_correct": 2,
+      "wrong_reason": 4,
+      "fn_missed": 18,
+      "fp_clean": 7,
+      "tn_clean": 17,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 13,
+      "precision": 0.1538,
+      "precision_pct": 15.4,
+      "precision_ci95": [
+        4.3,
+        42.2
+      ],
+      "correct_recall": 0.0833,
+      "correct_recall_pct": 8.3,
+      "recall_ci95": [
+        2.3,
+        25.8
+      ],
+      "wrong_reason_rate_pct": 16.7,
+      "missed_rate_pct": 75.0,
+      "f1": 0.1081,
+      "f1_pct": 10.8,
+      "fpr": 0.2917,
+      "fpr_pct": 29.2,
+      "fpr_ci95": [
+        14.9,
+        49.2
+      ]
+    },
+    {
+      "threshold": 30.0,
+      "threshold_normalized": 0.3,
+      "tp_correct": 2,
+      "wrong_reason": 4,
+      "fn_missed": 18,
+      "fp_clean": 7,
+      "tn_clean": 17,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 13,
+      "precision": 0.1538,
+      "precision_pct": 15.4,
+      "precision_ci95": [
+        4.3,
+        42.2
+      ],
+      "correct_recall": 0.0833,
+      "correct_recall_pct": 8.3,
+      "recall_ci95": [
+        2.3,
+        25.8
+      ],
+      "wrong_reason_rate_pct": 16.7,
+      "missed_rate_pct": 75.0,
+      "f1": 0.1081,
+      "f1_pct": 10.8,
+      "fpr": 0.2917,
+      "fpr_pct": 29.2,
+      "fpr_ci95": [
+        14.9,
+        49.2
+      ]
+    },
+    {
+      "threshold": 40.0,
+      "threshold_normalized": 0.4,
+      "tp_correct": 2,
+      "wrong_reason": 4,
+      "fn_missed": 18,
+      "fp_clean": 7,
+      "tn_clean": 17,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 13,
+      "precision": 0.1538,
+      "precision_pct": 15.4,
+      "precision_ci95": [
+        4.3,
+        42.2
+      ],
+      "correct_recall": 0.0833,
+      "correct_recall_pct": 8.3,
+      "recall_ci95": [
+        2.3,
+        25.8
+      ],
+      "wrong_reason_rate_pct": 16.7,
+      "missed_rate_pct": 75.0,
+      "f1": 0.1081,
+      "f1_pct": 10.8,
+      "fpr": 0.2917,
+      "fpr_pct": 29.2,
+      "fpr_ci95": [
+        14.9,
+        49.2
+      ]
+    },
+    {
+      "threshold": 50.0,
+      "threshold_normalized": 0.5,
+      "tp_correct": 2,
+      "wrong_reason": 3,
+      "fn_missed": 19,
+      "fp_clean": 5,
+      "tn_clean": 19,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 10,
+      "precision": 0.2,
+      "precision_pct": 20.0,
+      "precision_ci95": [
+        5.7,
+        51.0
+      ],
+      "correct_recall": 0.0833,
+      "correct_recall_pct": 8.3,
+      "recall_ci95": [
+        2.3,
+        25.8
+      ],
+      "wrong_reason_rate_pct": 12.5,
+      "missed_rate_pct": 79.2,
+      "f1": 0.1176,
+      "f1_pct": 11.8,
+      "fpr": 0.2083,
+      "fpr_pct": 20.8,
+      "fpr_ci95": [
+        9.2,
+        40.5
+      ]
+    },
+    {
+      "threshold": 60.0,
+      "threshold_normalized": 0.6,
+      "tp_correct": 1,
+      "wrong_reason": 2,
+      "fn_missed": 21,
+      "fp_clean": 2,
+      "tn_clean": 22,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 5,
+      "precision": 0.2,
+      "precision_pct": 20.0,
+      "precision_ci95": [
+        3.6,
+        62.4
+      ],
+      "correct_recall": 0.0417,
+      "correct_recall_pct": 4.2,
+      "recall_ci95": [
+        0.7,
+        20.2
+      ],
+      "wrong_reason_rate_pct": 8.3,
+      "missed_rate_pct": 87.5,
+      "f1": 0.069,
+      "f1_pct": 6.9,
+      "fpr": 0.0833,
+      "fpr_pct": 8.3,
+      "fpr_ci95": [
+        2.3,
+        25.8
+      ]
+    },
+    {
+      "threshold": 70.0,
+      "threshold_normalized": 0.7,
+      "tp_correct": 0,
+      "wrong_reason": 0,
+      "fn_missed": 24,
+      "fp_clean": 0,
+      "tn_clean": 24,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 0,
+      "precision": null,
+      "precision_pct": "N/A (no flags)",
+      "precision_ci95": "N/A (no flags)",
+      "correct_recall": 0.0,
+      "correct_recall_pct": 0.0,
+      "recall_ci95": [
+        0.0,
+        13.8
+      ],
+      "wrong_reason_rate_pct": 0.0,
+      "missed_rate_pct": 100.0,
+      "f1": 0.0,
+      "f1_pct": 0.0,
+      "fpr": 0.0,
+      "fpr_pct": 0.0,
+      "fpr_ci95": [
+        0.0,
+        13.8
+      ]
+    },
+    {
+      "threshold": 80.0,
+      "threshold_normalized": 0.8,
+      "tp_correct": 0,
+      "wrong_reason": 0,
+      "fn_missed": 24,
+      "fp_clean": 0,
+      "tn_clean": 24,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 0,
+      "precision": null,
+      "precision_pct": "N/A (no flags)",
+      "precision_ci95": "N/A (no flags)",
+      "correct_recall": 0.0,
+      "correct_recall_pct": 0.0,
+      "recall_ci95": [
+        0.0,
+        13.8
+      ],
+      "wrong_reason_rate_pct": 0.0,
+      "missed_rate_pct": 100.0,
+      "f1": 0.0,
+      "f1_pct": 0.0,
+      "fpr": 0.0,
+      "fpr_pct": 0.0,
+      "fpr_ci95": [
+        0.0,
+        13.8
+      ]
+    },
+    {
+      "threshold": 90.0,
+      "threshold_normalized": 0.9,
+      "tp_correct": 0,
+      "wrong_reason": 0,
+      "fn_missed": 24,
+      "fp_clean": 0,
+      "tn_clean": 24,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 0,
+      "precision": null,
+      "precision_pct": "N/A (no flags)",
+      "precision_ci95": "N/A (no flags)",
+      "correct_recall": 0.0,
+      "correct_recall_pct": 0.0,
+      "recall_ci95": [
+        0.0,
+        13.8
+      ],
+      "wrong_reason_rate_pct": 0.0,
+      "missed_rate_pct": 100.0,
+      "f1": 0.0,
+      "f1_pct": 0.0,
+      "fpr": 0.0,
+      "fpr_pct": 0.0,
+      "fpr_ci95": [
+        0.0,
+        13.8
+      ]
+    },
+    {
+      "threshold": 100.0,
+      "threshold_normalized": 1.0,
+      "tp_correct": 0,
+      "wrong_reason": 0,
+      "fn_missed": 24,
+      "fp_clean": 0,
+      "tn_clean": 24,
+      "n_tampered": 24,
+      "n_clean": 24,
+      "total_flagged": 0,
+      "precision": null,
+      "precision_pct": "N/A (no flags)",
+      "precision_ci95": "N/A (no flags)",
+      "correct_recall": 0.0,
+      "correct_recall_pct": 0.0,
+      "recall_ci95": [
+        0.0,
+        13.8
+      ],
+      "wrong_reason_rate_pct": 0.0,
+      "missed_rate_pct": 100.0,
+      "f1": 0.0,
+      "f1_pct": 0.0,
+      "fpr": 0.0,
+      "fpr_pct": 0.0,
+      "fpr_ci95": [
+        0.0,
+        13.8
+      ]
+    }
+  ],
+  "optimal_threshold": {
+    "threshold": 50.0,
+    "threshold_normalized": 0.5,
+    "tp_correct": 2,
+    "wrong_reason": 3,
+    "fn_missed": 19,
+    "fp_clean": 5,
+    "tn_clean": 19,
+    "n_tampered": 24,
+    "n_clean": 24,
+    "total_flagged": 10,
+    "precision": 0.2,
+    "precision_pct": 20.0,
+    "precision_ci95": [
+      5.7,
+      51.0
+    ],
+    "correct_recall": 0.0833,
+    "correct_recall_pct": 8.3,
+    "recall_ci95": [
+      2.3,
+      25.8
+    ],
+    "wrong_reason_rate_pct": 12.5,
+    "missed_rate_pct": 79.2,
+    "f1": 0.1176,
+    "f1_pct": 11.8,
+    "fpr": 0.2083,
+    "fpr_pct": 20.8,
+    "fpr_ci95": [
+      9.2,
+      40.5
+    ]
+  },
+  "total_time_sec": 18.28,
+  "records": [
+    {
+      "id": "pan_clean_01",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.027,
+      "tampering_score_pct": 2.7,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.027,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1019.3
+    },
+    {
+      "id": "pan_tampered_photo_swap_01",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "tamper_variant": "photo_swap",
+      "tamper_details": "Swapped cardholder photo with alternate portrait.",
+      "tampered_field": "photo",
+      "tampered_bbox": [
+        0.177,
+        0.775,
+        0.51,
+        0.95
+      ],
+      "tampering_score": 0.026,
+      "tampering_score_pct": 2.6,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.026,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 919.0
+    },
+    {
+      "id": "pan_clean_02",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.028,
+      "tampering_score_pct": 2.8,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.028,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 840.4
+    },
+    {
+      "id": "pan_tampered_photo_swap_02",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "tamper_variant": "photo_swap",
+      "tamper_details": "Swapped cardholder photo with alternate portrait.",
+      "tampered_field": "photo",
+      "tampered_bbox": [
+        0.177,
+        0.775,
+        0.51,
+        0.95
+      ],
+      "tampering_score": 0.028,
+      "tampering_score_pct": 2.8,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.028,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 794.8
+    },
+    {
+      "id": "pan_clean_03",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.114,
+      "tampering_score_pct": 11.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "HIGH_COMPRESSION_ANOMALY"
+      ],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.114,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 977.4
+    },
+    {
+      "id": "pan_tampered_text_edit_03",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "perfect",
+      "tamper_details": "Altered DOB to 05/03/1978 (perfect font/position)",
+      "tampered_field": "dob",
+      "tampered_bbox": [
+        0.671,
+        0.225,
+        0.738,
+        0.438
+      ],
+      "tampering_score": 0.114,
+      "tampering_score_pct": 11.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [
+        "HIGH_COMPRESSION_ANOMALY"
+      ],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.114,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1182.6
+    },
+    {
+      "id": "pan_clean_04",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.033,
+      "tampering_score_pct": 3.3,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.033,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 995.2
+    },
+    {
+      "id": "pan_tampered_text_edit_04",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "font_mismatch",
+      "tamper_details": "Altered Name to KAPIL DEV SHARMA with mismatched font",
+      "tampered_field": "name",
+      "tampered_bbox": [
+        0.323,
+        0.225,
+        0.39,
+        0.525
+      ],
+      "tampering_score": 0.034,
+      "tampering_score_pct": 3.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.034,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1061.2
+    },
+    {
+      "id": "pan_clean_05",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.04,
+      "tampering_score_pct": 4.0,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.04,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1102.0
+    },
+    {
+      "id": "pan_tampered_text_edit_05",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "misaligned",
+      "tamper_details": "Altered Father Name to ANAND SHARMA with 3px baseline shift",
+      "tampered_field": "father_name",
+      "tampered_bbox": [
+        0.506,
+        0.225,
+        0.573,
+        0.5
+      ],
+      "tampering_score": 0.04,
+      "tampering_score_pct": 4.0,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.04,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1266.4
+    },
+    {
+      "id": "pan_clean_06",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.082,
+      "tampering_score_pct": 8.2,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.082,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1218.1
+    },
+    {
+      "id": "pan_tampered_text_edit_06",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "checksum_break",
+      "tamper_details": "Altered PAN to FCKXB6605N (invalid holder type 'X')",
+      "tampered_field": "pan_number",
+      "tampered_bbox": [
+        0.219,
+        0.05,
+        0.285,
+        0.287
+      ],
+      "tampering_score": 0.082,
+      "tampering_score_pct": 8.2,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.082,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1123.4
+    },
+    {
+      "id": "pan_clean_07",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.001,
+      "tampering_score_pct": 0.1,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.001,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 1202.9
+    },
+    {
+      "id": "pan_tampered_recompression_07",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "tamper_variant": "recompression",
+      "tamper_details": "Recompressed image with heavy JPEG quantization (quality=28).",
+      "tampered_field": "whole_image",
+      "tampered_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tampering_score": 0.001,
+      "tampering_score_pct": 0.1,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.001,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 352.1
+    },
+    {
+      "id": "pan_clean_08",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.048,
+      "tampering_score_pct": 4.8,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.048,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 356.8
+    },
+    {
+      "id": "pan_tampered_recompression_08",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "tamper_variant": "recompression",
+      "tamper_details": "Recompressed image with heavy JPEG quantization (quality=28).",
+      "tampered_field": "whole_image",
+      "tampered_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tampering_score": 0.046,
+      "tampering_score_pct": 4.6,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.046,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 352.2
+    },
+    {
+      "id": "aadhaar_clean_01",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.517,
+      "tampering_score_pct": 51.7,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "address"
+      ],
+      "module_contributions": {
+        "ela": 0.067,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 1432.6
+    },
+    {
+      "id": "aadhaar_tampered_photo_swap_01",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "tamper_variant": "photo_swap",
+      "tamper_details": "Swapped cardholder photo with alternate portrait.",
+      "tampered_field": "photo",
+      "tampered_bbox": [
+        0.154,
+        0.541,
+        0.442,
+        0.694
+      ],
+      "tampering_score": 0.067,
+      "tampering_score_pct": 6.7,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.067,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 575.8
+    },
+    {
+      "id": "aadhaar_clean_02",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.494,
+      "tampering_score_pct": 49.4,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "address"
+      ],
+      "module_contributions": {
+        "ela": 0.044,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 754.2
+    },
+    {
+      "id": "aadhaar_tampered_photo_swap_02",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "tamper_variant": "photo_swap",
+      "tamper_details": "Swapped cardholder photo with alternate portrait.",
+      "tampered_field": "photo",
+      "tampered_bbox": [
+        0.154,
+        0.541,
+        0.442,
+        0.694
+      ],
+      "tampering_score": 0.644,
+      "tampering_score_pct": 64.4,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob",
+        "gender",
+        "address"
+      ],
+      "module_contributions": {
+        "ela": 0.044,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.6
+      },
+      "latency_ms": 683.8
+    },
+    {
+      "id": "aadhaar_clean_03",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.569,
+      "tampering_score_pct": 56.9,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "HIGH_COMPRESSION_ANOMALY",
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob"
+      ],
+      "module_contributions": {
+        "ela": 0.119,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 768.7
+    },
+    {
+      "id": "aadhaar_tampered_qr_mismatch_03",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "qr_mismatch",
+      "tamper_details": "Altered printed DOB to 01/01/2000 while QR code contains original DOB",
+      "tampered_field": "date_of_birth",
+      "tampered_bbox": [
+        0.304,
+        0.047,
+        0.362,
+        0.306
+      ],
+      "tampering_score": 0.569,
+      "tampering_score_pct": 56.9,
+      "flagged_default": true,
+      "localization_correct": true,
+      "localization_reason": "field_iou_0.27:dob",
+      "localization_matches": [
+        "field_iou_0.27:dob"
+      ],
+      "flagged_checks": [
+        "HIGH_COMPRESSION_ANOMALY",
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob"
+      ],
+      "module_contributions": {
+        "ela": 0.119,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 695.7
+    },
+    {
+      "id": "aadhaar_clean_04",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.498,
+      "tampering_score_pct": 49.8,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob"
+      ],
+      "module_contributions": {
+        "ela": 0.048,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 681.2
+    },
+    {
+      "id": "aadhaar_tampered_qr_mismatch_04",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "qr_mismatch",
+      "tamper_details": "Altered printed Name to KAPIL DEV SHARMA while QR code contains original Name",
+      "tampered_field": "name",
+      "tampered_bbox": [
+        0.163,
+        0.188,
+        0.221,
+        0.518
+      ],
+      "tampering_score": 0.498,
+      "tampering_score_pct": 49.8,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob"
+      ],
+      "module_contributions": {
+        "ela": 0.048,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 575.1
+    },
+    {
+      "id": "aadhaar_clean_05",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.665,
+      "tampering_score_pct": 66.5,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob",
+        "gender",
+        "aadhaar_number"
+      ],
+      "module_contributions": {
+        "ela": 0.065,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.6
+      },
+      "latency_ms": 617.8
+    },
+    {
+      "id": "aadhaar_tampered_qr_mismatch_05",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "qr_mismatch",
+      "tamper_details": "Altered printed Gender to Male while QR code contains original Gender",
+      "tampered_field": "gender",
+      "tampered_bbox": [
+        0.427,
+        0.047,
+        0.485,
+        0.259
+      ],
+      "tampering_score": 0.665,
+      "tampering_score_pct": 66.5,
+      "flagged_default": true,
+      "localization_correct": true,
+      "localization_reason": "field_match:gender; field_iou_0.22:gender",
+      "localization_matches": [
+        "field_match:gender",
+        "field_iou_0.22:gender"
+      ],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob",
+        "gender",
+        "aadhaar_number"
+      ],
+      "module_contributions": {
+        "ela": 0.065,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.6
+      },
+      "latency_ms": 614.2
+    },
+    {
+      "id": "aadhaar_clean_06",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.617,
+      "tampering_score_pct": 61.7,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob",
+        "gender"
+      ],
+      "module_contributions": {
+        "ela": 0.067,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.55
+      },
+      "latency_ms": 1488.4
+    },
+    {
+      "id": "aadhaar_tampered_qr_mismatch_06",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "qr_mismatch",
+      "tamper_details": "Altered printed Aadhaar last 4 to 1234 while QR retains original 1053",
+      "tampered_field": "aadhaar_number",
+      "tampered_bbox": [
+        0.746,
+        0.306,
+        0.827,
+        0.682
+      ],
+      "tampering_score": 0.618,
+      "tampering_score_pct": 61.8,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob",
+        "gender"
+      ],
+      "module_contributions": {
+        "ela": 0.068,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.55
+      },
+      "latency_ms": 913.5
+    },
+    {
+      "id": "aadhaar_clean_07",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.527,
+      "tampering_score_pct": 52.7,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob"
+      ],
+      "module_contributions": {
+        "ela": 0.077,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 829.1
+    },
+    {
+      "id": "aadhaar_tampered_recompression_07",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "tamper_variant": "recompression",
+      "tamper_details": "Recompressed image with heavy JPEG quantization (quality=28).",
+      "tampered_field": "whole_image",
+      "tampered_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tampering_score": 0.513,
+      "tampering_score_pct": 51.3,
+      "flagged_default": true,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [
+        "LOCALIZED_FIELD_TAMPERING"
+      ],
+      "flagged_fields": [
+        "dob"
+      ],
+      "module_contributions": {
+        "ela": 0.063,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.45
+      },
+      "latency_ms": 672.0
+    },
+    {
+      "id": "aadhaar_clean_08",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.067,
+      "tampering_score_pct": 6.7,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.067,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 901.6
+    },
+    {
+      "id": "aadhaar_tampered_recompression_08",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "tamper_variant": "recompression",
+      "tamper_details": "Recompressed image with heavy JPEG quantization (quality=28).",
+      "tampered_field": "whole_image",
+      "tampered_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tampering_score": 0.054,
+      "tampering_score_pct": 5.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.054,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 417.0
+    },
+    {
+      "id": "voter_clean_01",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.021,
+      "tampering_score_pct": 2.1,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.021,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 500.0
+    },
+    {
+      "id": "voter_tampered_photo_swap_01",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "tamper_variant": "photo_swap",
+      "tamper_details": "Swapped cardholder photo with alternate portrait.",
+      "tampered_field": "photo",
+      "tampered_bbox": [
+        0.16,
+        0.75,
+        0.48,
+        0.925
+      ],
+      "tampering_score": 0.02,
+      "tampering_score_pct": 2.0,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.02,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 483.8
+    },
+    {
+      "id": "voter_clean_02",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.029,
+      "tampering_score_pct": 2.9,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.029,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 738.3
+    },
+    {
+      "id": "voter_tampered_photo_swap_02",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "tamper_variant": "photo_swap",
+      "tamper_details": "Swapped cardholder photo with alternate portrait.",
+      "tampered_field": "photo",
+      "tampered_bbox": [
+        0.16,
+        0.75,
+        0.48,
+        0.925
+      ],
+      "tampering_score": 0.029,
+      "tampering_score_pct": 2.9,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.029,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 809.8
+    },
+    {
+      "id": "voter_clean_03",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.035,
+      "tampering_score_pct": 3.5,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.035,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 413.8
+    },
+    {
+      "id": "voter_tampered_text_edit_03",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "perfect",
+      "tamper_details": "Altered Name to KAPIL DEV SHARMA (perfect font/position)",
+      "tampered_field": "name",
+      "tampered_bbox": [
+        0.304,
+        0.25,
+        0.364,
+        0.55
+      ],
+      "tampering_score": 0.034,
+      "tampering_score_pct": 3.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.034,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 689.9
+    },
+    {
+      "id": "voter_clean_04",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.027,
+      "tampering_score_pct": 2.7,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.027,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 765.2
+    },
+    {
+      "id": "voter_tampered_text_edit_04",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "font_mismatch",
+      "tamper_details": "Altered Father Name to ANAND SHARMA with mismatched font",
+      "tampered_field": "father_name",
+      "tampered_bbox": [
+        0.444,
+        0.25,
+        0.504,
+        0.525
+      ],
+      "tampering_score": 0.027,
+      "tampering_score_pct": 2.7,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.027,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 817.3
+    },
+    {
+      "id": "voter_clean_05",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.034,
+      "tampering_score_pct": 3.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.034,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 680.4
+    },
+    {
+      "id": "voter_tampered_text_edit_05",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "misaligned",
+      "tamper_details": "Altered DOB to 01/01/1990 with 3px vertical shift",
+      "tampered_field": "date_of_birth",
+      "tampered_bbox": [
+        0.596,
+        0.375,
+        0.656,
+        0.575
+      ],
+      "tampering_score": 0.034,
+      "tampering_score_pct": 3.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.034,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 680.7
+    },
+    {
+      "id": "voter_clean_06",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.024,
+      "tampering_score_pct": 2.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.024,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 535.5
+    },
+    {
+      "id": "voter_tampered_text_edit_06",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "tamper_variant": "checksum_break",
+      "tamper_details": "Corrupted EPIC format to GUJ789X123 (invalid letter in number field)",
+      "tampered_field": "epic_number",
+      "tampered_bbox": [
+        0.176,
+        0.05,
+        0.24,
+        0.325
+      ],
+      "tampering_score": 0.024,
+      "tampering_score_pct": 2.4,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.024,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 557.0
+    },
+    {
+      "id": "voter_clean_07",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.037,
+      "tampering_score_pct": 3.7,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.037,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 568.2
+    },
+    {
+      "id": "voter_tampered_recompression_07",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "tamper_variant": "recompression",
+      "tamper_details": "Recompressed image with heavy JPEG quantization (quality=28).",
+      "tampered_field": "whole_image",
+      "tampered_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tampering_score": 0.03,
+      "tampering_score_pct": 3.0,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.03,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 585.2
+    },
+    {
+      "id": "voter_clean_08",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "tamper_variant": null,
+      "tamper_details": null,
+      "tampered_field": null,
+      "tampered_bbox": null,
+      "tampering_score": 0.026,
+      "tampering_score_pct": 2.6,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "clean_document",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.026,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 477.5
+    },
+    {
+      "id": "voter_tampered_recompression_08",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "tamper_variant": "recompression",
+      "tamper_details": "Recompressed image with heavy JPEG quantization (quality=28).",
+      "tampered_field": "whole_image",
+      "tampered_bbox": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "tampering_score": 0.022,
+      "tampering_score_pct": 2.2,
+      "flagged_default": false,
+      "localization_correct": false,
+      "localization_reason": "no_region_overlap",
+      "localization_matches": [],
+      "flagged_checks": [],
+      "flagged_fields": [],
+      "module_contributions": {
+        "ela": 0.022,
+        "photo": 0.0,
+        "exif": 0.0,
+        "text": 0.0,
+        "stamp": 0.0,
+        "field_forensics": 0.0
+      },
+      "latency_ms": 442.7
+    }
+  ]
+}

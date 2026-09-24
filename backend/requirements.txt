@@ -1,0 +1,18 @@
+# SentinelAuth Document Screening Platform - Python dependencies
+fastapi>=0.110.0
+uvicorn>=0.29.0
+python-multipart>=0.0.9
+paddlepaddle>=3.0.0
+paddleocr>=3.0.0
+pytesseract>=0.3.10
+mrz>=0.6.0
+numpy>=1.24.0
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+pydantic>=2.0.0
+sqlalchemy>=2.0.0
+rapidfuzz>=3.6.0
+requests>=2.31.0
+pytest>=8.0.0
+httpx>=0.27.0
+

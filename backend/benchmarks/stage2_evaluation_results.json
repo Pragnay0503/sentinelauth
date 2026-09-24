@@ -1,0 +1,374 @@
+{
+  "national_id_aadhaar": {
+    "aadhaar_number": {
+      "n": 8,
+      "before_accuracy_pct": 87.5,
+      "before_cer": 0.125,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "address": {
+      "n": 8,
+      "before_accuracy_pct": 12.5,
+      "before_cer": 0.31,
+      "after_accuracy_pct": 0.0,
+      "after_cer": 0.903,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "date_of_birth": {
+      "n": 8,
+      "before_accuracy_pct": 87.5,
+      "before_cer": 0.125,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "gender": {
+      "n": 8,
+      "before_accuracy_pct": 100.0,
+      "before_cer": 0.0,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "name": {
+      "n": 8,
+      "before_accuracy_pct": 75.0,
+      "before_cer": 0.061,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.004,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    }
+  },
+  "national_id_pan": {
+    "date_of_birth": {
+      "n": 8,
+      "before_accuracy_pct": 87.5,
+      "before_cer": 0.125,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "pattern_fallback": 3
+      }
+    },
+    "father_name": {
+      "n": 8,
+      "before_accuracy_pct": 50.0,
+      "before_cer": 0.5,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "pattern_fallback": 3
+      }
+    },
+    "name": {
+      "n": 8,
+      "before_accuracy_pct": 50.0,
+      "before_cer": 0.433,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.01,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "pattern_fallback": 3
+      }
+    },
+    "pan_number": {
+      "n": 8,
+      "before_accuracy_pct": 62.5,
+      "before_cer": 0.325,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.125,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "pattern_fallback": 2,
+        "none": 1
+      }
+    }
+  },
+  "national_id_voter": {
+    "address": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 0.688,
+      "after_accuracy_pct": 0.0,
+      "after_cer": 0.874,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "date_of_birth": {
+      "n": 8,
+      "before_accuracy_pct": 87.5,
+      "before_cer": 0.125,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "epic_number": {
+      "n": 8,
+      "before_accuracy_pct": 87.5,
+      "before_cer": 0.125,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "father_name": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.025,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "pattern_fallback": 3
+      }
+    },
+    "gender": {
+      "n": 8,
+      "before_accuracy_pct": 100.0,
+      "before_cer": 0.0,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "name": {
+      "n": 8,
+      "before_accuracy_pct": 25.0,
+      "before_cer": 0.75,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.025,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 4,
+        "pattern_fallback": 4
+      }
+    }
+  },
+  "passport": {
+    "date_of_birth": {
+      "n": 8,
+      "before_accuracy_pct": 75.0,
+      "before_cer": 0.225,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "pattern_fallback": 3,
+        "label_anchor": 5
+      }
+    },
+    "date_of_expiry": {
+      "n": 8,
+      "before_accuracy_pct": 75.0,
+      "before_cer": 0.25,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 4,
+        "label_anchor": 4
+      }
+    },
+    "given_names": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 0.837,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 8
+      }
+    },
+    "nationality": {
+      "n": 8,
+      "before_accuracy_pct": 75.0,
+      "before_cer": 0.25,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 4,
+        "label_anchor": 4
+      }
+    },
+    "passport_number": {
+      "n": 8,
+      "before_accuracy_pct": 62.5,
+      "before_cer": 0.375,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 5,
+        "label_anchor": 3
+      }
+    },
+    "sex": {
+      "n": 8,
+      "before_accuracy_pct": 25.0,
+      "before_cer": 0.75,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 8
+      }
+    },
+    "surname": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 0.792,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 7,
+        "pattern_fallback": 1
+      }
+    }
+  },
+  "visa": {
+    "date_of_birth": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 0.675,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.075,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 8
+      }
+    },
+    "date_of_expiry": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "pattern_fallback": 3
+      }
+    },
+    "given_names": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.125,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "none": 1,
+        "pattern_fallback": 2
+      }
+    },
+    "nationality": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 8
+      }
+    },
+    "passport_number": {
+      "n": 8,
+      "before_accuracy_pct": 37.5,
+      "before_cer": 0.514,
+      "after_accuracy_pct": 75.0,
+      "after_cer": 0.25,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 6,
+        "none": 2
+      }
+    },
+    "sex": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "pattern_fallback",
+      "method_counts": {
+        "pattern_fallback": 8
+      }
+    },
+    "surname": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.125,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 5,
+        "none": 1,
+        "pattern_fallback": 2
+      }
+    },
+    "valid_from": {
+      "n": 8,
+      "before_accuracy_pct": 0.0,
+      "before_cer": 1.0,
+      "after_accuracy_pct": 87.5,
+      "after_cer": 0.125,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 4,
+        "pattern_fallback": 3,
+        "none": 1
+      }
+    },
+    "visa_number": {
+      "n": 8,
+      "before_accuracy_pct": 50.0,
+      "before_cer": 0.5,
+      "after_accuracy_pct": 100.0,
+      "after_cer": 0.0,
+      "dominant_method": "label_anchor",
+      "method_counts": {
+        "label_anchor": 6,
+        "pattern_fallback": 2
+      }
+    }
+  }
+}

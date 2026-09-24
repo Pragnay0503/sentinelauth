@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "./theme/tokens.css";
+
+@layer base {
+  body {
+    background-color: var(--void);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+  }
+
+  code, pre, .font-mono, .font-data {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum" on, "zero" on;
+  }
+}
+
+/* Console Operations Panel Styling (Hairline border, 0px radius, no shadow) */
+.console-panel,
+.glass-panel,
+.primary-action-panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-panel);
+  box-shadow: none;
+}
+
+.quiet-container {
+  background: transparent;
+  border-top: 1px solid var(--panel-border);
+}
+
+/* Custom Scrollbars adhering to design tokens */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: var(--radius-panel);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-muted);
+}
+
+/* Touch targets helper */
+.touch-target {
+  min-height: var(--min-touch-target);
+  min-width: var(--min-touch-target);
+}

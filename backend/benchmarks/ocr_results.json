@@ -1,0 +1,2152 @@
+{
+  "benchmark_name": "SentinelAuth Module 1 OCR Extraction Benchmark",
+  "timestamp": "2026-09-22T09:21:56Z",
+  "disclaimer": "Benchmarked against synthetically generated documents and tampering, not real forged government documents (which cannot be legally sourced for testing).",
+  "documents_evaluated": 48,
+  "total_fields_evaluated": 240,
+  "total_exact_matches": 177,
+  "overall_accuracy_pct": 73.75,
+  "overall_avg_cer": 0.1645,
+  "total_time_sec": 457.48,
+  "per_document_type": {
+    "national_id_pan": {
+      "document_count": 16,
+      "total_fields": 64,
+      "exact_matches": 58,
+      "accuracy_pct": 90.62,
+      "avg_cer": 0.0901
+    },
+    "national_id_aadhaar": {
+      "document_count": 16,
+      "total_fields": 80,
+      "exact_matches": 61,
+      "accuracy_pct": 76.25,
+      "avg_cer": 0.0975
+    },
+    "national_id_voter": {
+      "document_count": 16,
+      "total_fields": 96,
+      "exact_matches": 58,
+      "accuracy_pct": 60.42,
+      "avg_cer": 0.27
+    }
+  },
+  "worst_5_fields": [
+    {
+      "doc_id": "pan_clean_03",
+      "doc_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "field_name": "pan_number",
+      "ground_truth": "CPZAR4410E",
+      "extracted": "_",
+      "cer": 1.0
+    },
+    {
+      "doc_id": "pan_tampered_text_edit_03",
+      "doc_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "field_name": "pan_number",
+      "ground_truth": "CPZAR4410E",
+      "extracted": "_",
+      "cer": 1.0
+    },
+    {
+      "doc_id": "pan_clean_06",
+      "doc_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "field_name": "pan_number",
+      "ground_truth": "FHKMN6620N",
+      "extracted": "_",
+      "cer": 1.0
+    },
+    {
+      "doc_id": "pan_tampered_recompression_06",
+      "doc_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "field_name": "pan_number",
+      "ground_truth": "FHKMN6620N",
+      "extracted": "",
+      "cer": 1.0
+    },
+    {
+      "doc_id": "pan_tampered_stamp_duplicate_07",
+      "doc_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "field_name": "pan_number",
+      "ground_truth": "GJQRS1192P",
+      "extracted": "_",
+      "cer": 1.0
+    }
+  ],
+  "document_evaluations": [
+    {
+      "id": "pan_clean_01",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8186.4,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "ABCDE1234F",
+          "extracted": "ABCDE1234F",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "RAJESH VERMA",
+          "extracted": "RAJESH VERMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "SURESH VERMA",
+          "extracted": "SURESH VERMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "12/04/1985",
+          "extracted": "12/04/1985",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_photo_swap_01",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "latency_ms": 8331.7,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "ABCDE1234F",
+          "extracted": "ABCDE1234F",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "RAJESH VERMA",
+          "extracted": "RAJESH VERMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "SURESH VERMA",
+          "extracted": "SURESH VERMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "12/04/1985",
+          "extracted": "12/04/1985",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_02",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8965.3,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "BKTPM8912K",
+          "extracted": "BKTPM8912K",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "PRIYA NAIR",
+          "extracted": "PRIYA NAIR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "RAMESH NAIR",
+          "extracted": "RAMESH NAIR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "22/09/1991",
+          "extracted": "22/09/1991",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_photo_swap_02",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "latency_ms": 8537.3,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "BKTPM8912K",
+          "extracted": "BKTPM8912K",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "PRIYA NAIR",
+          "extracted": "PRIYA NAIR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "RAMESH NAIR",
+          "extracted": "RAMESH NAIR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "22/09/1991",
+          "extracted": "22/09/1991",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_03",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8416.1,
+      "fields_evaluated": 4,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 75.0,
+      "doc_avg_cer": 0.25,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "CPZAR4410E",
+          "extracted": "_",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "name": {
+          "ground_truth": "ARUN KUMAR",
+          "extracted": "ARUN KUMAR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "VIJAY KUMAR",
+          "extracted": "VIJAY KUMAR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "05/11/1988",
+          "extracted": "05/11/1988",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_text_edit_03",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "latency_ms": 8046.1,
+      "fields_evaluated": 4,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 75.0,
+      "doc_avg_cer": 0.25,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "CPZAR4410E",
+          "extracted": "_",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "name": {
+          "ground_truth": "ARUN KUMAR",
+          "extracted": "ARUN KUMAR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "VIJAY KUMAR",
+          "extracted": "VIJAY KUMAR",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "28/11/1999",
+          "extracted": "28/11/1999",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_04",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8498.1,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "DFTPS7731L",
+          "extracted": "DFTPS7731L",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "DEEPAK SHARMA",
+          "extracted": "DEEPAK SHARMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "ANAND SHARMA",
+          "extracted": "ANAND SHARMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "19/07/1983",
+          "extracted": "19/07/1983",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_text_edit_04",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "latency_ms": 8586.1,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "DFTPS7731L",
+          "extracted": "DFTPS7731L",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "DEEPAK SHARMA",
+          "extracted": "DEEPAK SHARMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "ANAND SHARMA",
+          "extracted": "ANAND SHARMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "28/11/1999",
+          "extracted": "28/11/1999",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_05",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8683.7,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "EGLPB3319M",
+          "extracted": "EGLPB3319M",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "POOJA PATEL",
+          "extracted": "POOJA PATEL",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "BHAVESH PATEL",
+          "extracted": "BHAVESH PATEL",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "30/03/1994",
+          "extracted": "30/03/1994",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_recompression_05",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "latency_ms": 8830.9,
+      "fields_evaluated": 4,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 75.0,
+      "doc_avg_cer": 0.1923,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "EGLPB3319M",
+          "extracted": "EGLPB3319M",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "POOJA PATEL",
+          "extracted": "POOJA PATEL",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "BHAVESH PATEL",
+          "extracted": "'s | ame-",
+          "exact_match": false,
+          "cer": 0.7692
+        },
+        "date_of_birth": {
+          "ground_truth": "30/03/1994",
+          "extracted": "30/03/1994",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_06",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8444.2,
+      "fields_evaluated": 4,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 75.0,
+      "doc_avg_cer": 0.25,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "FHKMN6620N",
+          "extracted": "_",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "name": {
+          "ground_truth": "MANISH GUPTA",
+          "extracted": "MANISH GUPTA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "DINESH GUPTA",
+          "extracted": "DINESH GUPTA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "14/12/1989",
+          "extracted": "14/12/1989",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_recompression_06",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "latency_ms": 16870.8,
+      "fields_evaluated": 4,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 75.0,
+      "doc_avg_cer": 0.25,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "FHKMN6620N",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "name": {
+          "ground_truth": "MANISH GUPTA",
+          "extracted": "MANISH GUPTA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "DINESH GUPTA",
+          "extracted": "DINESH GUPTA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "14/12/1989",
+          "extracted": "14/12/1989",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_07",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8004.2,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "GJQRS1192P",
+          "extracted": "GJQRS1192P",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SNEHA REDDY",
+          "extracted": "SNEHA REDDY",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "VENKAT REDDY",
+          "extracted": "VENKAT REDDY",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "08/06/1993",
+          "extracted": "08/06/1993",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_stamp_duplicate_07",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "latency_ms": 8744.5,
+      "fields_evaluated": 4,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 75.0,
+      "doc_avg_cer": 0.25,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "GJQRS1192P",
+          "extracted": "_",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "name": {
+          "ground_truth": "SNEHA REDDY",
+          "extracted": "SNEHA REDDY",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "VENKAT REDDY",
+          "extracted": "VENKAT REDDY",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "08/06/1993",
+          "extracted": "08/06/1993",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_clean_08",
+      "document_type": "national_id_pan",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8508.3,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "HKTUV5541R",
+          "extracted": "HKTUV5541R",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "VIKRAM SINGH",
+          "extracted": "VIKRAM SINGH",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "JASWANT SINGH",
+          "extracted": "JASWANT SINGH",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "17/01/1987",
+          "extracted": "17/01/1987",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "pan_tampered_stamp_duplicate_08",
+      "document_type": "national_id_pan",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "latency_ms": 8729.4,
+      "fields_evaluated": 4,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 100.0,
+      "doc_avg_cer": 0.0,
+      "field_comparisons": {
+        "pan_number": {
+          "ground_truth": "HKTUV5541R",
+          "extracted": "HKTUV5541R",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "VIKRAM SINGH",
+          "extracted": "VIKRAM SINGH",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "JASWANT SINGH",
+          "extracted": "JASWANT SINGH",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "17/01/1987",
+          "extracted": "17/01/1987",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_01",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 10975.9,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0723,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "9999 4105 6785",
+          "extracted": "9999 4105 6785",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SUNITA SHARMA",
+          "extracted": "SUNITA SHARMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "15/08/1992",
+          "extracted": "15/08/1992",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "H No 45, Sector 12, Gandhinagar, Gujarat 382016",
+          "extracted": "H No 45 Sector 12, Gandhinagar , Gujarat 382016 KAJA KaRTHIKEY",
+          "exact_match": false,
+          "cer": 0.3617
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_photo_swap_01",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "latency_ms": 10299.0,
+      "fields_evaluated": 5,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 60.0,
+      "doc_avg_cer": 0.2128,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "9999 4105 6785",
+          "extracted": "9999 4105 6785",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SUNITA SHARMA",
+          "extracted": "SUNITA SHARMA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "15/08/1992",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "H No 45, Sector 12, Gandhinagar, Gujarat 382016",
+          "extracted": "H No 45 Sector 12 Gandhinagar , Gujarat 382016",
+          "exact_match": false,
+          "cer": 0.0638
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_02",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9290.5,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0773,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "8888 2190 3457",
+          "extracted": "8888 2190 3457",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "ROHAN MEHTA",
+          "extracted": "ROHAN MEHTA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "10/02/1986",
+          "extracted": "10/02/1986",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Flat 204, Galaxy Apt, Andheri, Mumbai 400053",
+          "extracted": "Flat 204 Galaxy Apt, Andheri Mumbai 400053 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.3864
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_photo_swap_02",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "latency_ms": 10400.8,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0091,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "8888 2190 3457",
+          "extracted": "8888 2190 3457",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "ROHAN MEHTA",
+          "extracted": "ROHAN MEHTA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "10/02/1986",
+          "extracted": "10/02/1986",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Flat 204, Galaxy Apt, Andheri, Mumbai 400053",
+          "extracted": "Flat 204 Galaxy Apt, Andheri Mumbai 400053",
+          "exact_match": false,
+          "cer": 0.0455
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_03",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9407.0,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.08,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "7777 3412 5694",
+          "extracted": "7777 3412 5694",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "ANANYA IYER",
+          "extracted": "ANANYA IYER",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "25/10/1995",
+          "extracted": "25/10/1995",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "12/A Temple St, Mylapore, Chennai 600004",
+          "extracted": "12IA Temple St, Mylapore, Chennai 600004 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.4
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_text_edit_03",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "latency_ms": 10580.8,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.075,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "7777 3412 5694",
+          "extracted": "7777 3412 5694",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "ANANYA IYER",
+          "extracted": "ANANYA IYER",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "01/01/2000",
+          "extracted": "01/01/2000",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "12/A Temple St, Mylapore, Chennai 600004",
+          "extracted": "12/A Temple St, Mylapore, Chennai 600004 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.375
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_04",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 10330.3,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.085,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "6666 5510 2933",
+          "extracted": "6666 5510 2933",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "KARTIK RAO",
+          "extracted": "KARTIK RAO",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "03/05/1990",
+          "extracted": "03/05/1990",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Plot 88, Jubilee Hills, Hyderabad 500033",
+          "extracted": "Plot 88 Jubilee Hills Hyderabad 500033 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.425
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_text_edit_04",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "latency_ms": 10715.0,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.085,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "6666 5510 2933",
+          "extracted": "6666 5510 2933",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "KARTIK RAO",
+          "extracted": "KARTIK RAO",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "01/01/2000",
+          "extracted": "01/01/2000",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Plot 88, Jubilee Hills, Hyderabad 500033",
+          "extracted": "Plot 88 Jubilee Hills , Hyderabad 500033 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.425
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_05",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 10505.0,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0744,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "5555 1239 8474",
+          "extracted": "5555 1239 8474",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "DIVYA JOSHI",
+          "extracted": "DIVYA JOSHI",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "18/12/1993",
+          "extracted": "18/12/1993",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "B-12 Navrangpura, Ahmedabad, Gujarat 380009",
+          "extracted": "B-12 Navrangpura Ahmedabad, Gujarat 380009 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.3721
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_recompression_05",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "latency_ms": 10765.8,
+      "fields_evaluated": 5,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 60.0,
+      "doc_avg_cer": 0.1607,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "5555 1239 8474",
+          "extracted": "5555 1239 8474",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "DIVYA JOSHI",
+          "extracted": "Name DIVYA JOSHI",
+          "exact_match": false,
+          "cer": 0.4545
+        },
+        "date_of_birth": {
+          "ground_truth": "18/12/1993",
+          "extracted": "18/12/1993",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "B-12 Navrangpura, Ahmedabad, Gujarat 380009",
+          "extracted": "B-12 Navrangpura, Ahmedabad, Gujarat 380009 KAJL Karthikey",
+          "exact_match": false,
+          "cer": 0.3488
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_06",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 10463.4,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0638,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "4444 9823 1053",
+          "extracted": "4444 9823 1053",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SANJAY CHOPRA",
+          "extracted": "SANJAY CHOPRA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "29/08/1981",
+          "extracted": "29/08/1981",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "House 10, Civil Lines, Jaipur, Rajasthan 302006",
+          "extracted": "House 10, Civil Lines, Jaipur, Rajasthan 302006 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.3191
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_recompression_06",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "latency_ms": 10076.2,
+      "fields_evaluated": 5,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 60.0,
+      "doc_avg_cer": 0.1407,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "4444 9823 1053",
+          "extracted": "4444 9823 1053",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SANJAY CHOPRA",
+          "extracted": "Name SANJAY CHOPRA",
+          "exact_match": false,
+          "cer": 0.3846
+        },
+        "date_of_birth": {
+          "ground_truth": "29/08/1981",
+          "extracted": "29/08/1981",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "House 10, Civil Lines, Jaipur, Rajasthan 302006",
+          "extracted": "House 10, Civil Lines, Jaipur, Rajasthan 302006 Kaja KarthikEy",
+          "exact_match": false,
+          "cer": 0.3191
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_07",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 10323.6,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0791,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "3333 7654 1299",
+          "extracted": "3333 7654 1299",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "MEERA SEN",
+          "extracted": "MEERA SEN",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "07/04/1997",
+          "extracted": "07/04/1997",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "5B Park Circus, Kolkata, West Bengal 700017",
+          "extracted": "SB Park Circus, Kolkata West Bengal 700017 KAJA KaRTHIKEY",
+          "exact_match": false,
+          "cer": 0.3953
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_stamp_duplicate_07",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "latency_ms": 9791.8,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.1535,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "3333 7654 1299",
+          "extracted": "3333 7654 1299",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "MEERA SEN",
+          "extracted": "MEERA SEN",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "07/04/1997",
+          "extracted": "07/04/1997",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "5B Park Circus, Kolkata, West Bengal 700017",
+          "extracted": "SB Park Circus Kolkata West Bengal 700017 KAJA KARTHIKEY SEAL DUPLICATE",
+          "exact_match": false,
+          "cer": 0.7674
+        }
+      }
+    },
+    {
+      "id": "aadhaar_clean_08",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 10649.6,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.0638,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "2222 8945 6107",
+          "extracted": "2222 8945 6107",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "AJAY TIWARI",
+          "extracted": "AJAY TIWARI",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "12/09/1984",
+          "extracted": "12/09/1984",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "D-44 Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+          "extracted": "D-44 Gomti Nagar, Lucknow, Uttar Pradesh 226010 KAJA KARTHIKEY",
+          "exact_match": false,
+          "cer": 0.3191
+        }
+      }
+    },
+    {
+      "id": "aadhaar_tampered_stamp_duplicate_08",
+      "document_type": "national_id_aadhaar",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "latency_ms": 10345.8,
+      "fields_evaluated": 5,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 80.0,
+      "doc_avg_cer": 0.1277,
+      "field_comparisons": {
+        "aadhaar_number": {
+          "ground_truth": "2222 8945 6107",
+          "extracted": "2222 8945 6107",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "AJAY TIWARI",
+          "extracted": "AJAY TIWARI",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "12/09/1984",
+          "extracted": "12/09/1984",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "D-44 Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+          "extracted": "D-44 Gomti Nagar_ Lucknow, Uttar Pradesh 226010 KAJA KARTHIKEY SEAL DUPLICAT",
+          "exact_match": false,
+          "cer": 0.6383
+        }
+      }
+    },
+    {
+      "id": "voter_clean_01",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9512.8,
+      "fields_evaluated": 6,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 66.67,
+      "doc_avg_cer": 0.299,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "WBD1234567",
+          "extracted": "WBD1234567",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "AMIT CHATTERJEE",
+          "extracted": "AMIT CHATTERJEE",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "BIMAL CHATTERJEE",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "24/09/1980",
+          "extracted": "24/09/1980",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Flat 3B, Lake View, Kolkata 700029",
+          "extracted": "Flat 3B",
+          "exact_match": false,
+          "cer": 0.7941
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_photo_swap_01",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "latency_ms": 9372.0,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.3435,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "WBD1234567",
+          "extracted": "WBD1234567",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "AMIT CHATTERJEE",
+          "extracted": "BIMAL CHATTERJEE",
+          "exact_match": false,
+          "cer": 0.2667
+        },
+        "father_name": {
+          "ground_truth": "BIMAL CHATTERJEE",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "24/09/1980",
+          "extracted": "24/09/1980",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Flat 3B, Lake View, Kolkata 700029",
+          "extracted": "Flat 3B",
+          "exact_match": false,
+          "cer": 0.7941
+        }
+      }
+    },
+    {
+      "id": "voter_clean_02",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9472.6,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.3081,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "DEL9876543",
+          "extracted": "DEL9876543",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "NEHA BANSAL",
+          "extracted": "OM BANSAL",
+          "exact_match": false,
+          "cer": 0.3636
+        },
+        "father_name": {
+          "ground_truth": "OM BANSAL",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "11/03/1992",
+          "extracted": "11/03/1992",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "C-5 Rohini Sector 9, Delhi 110085",
+          "extracted": "C-5 Rohini Sector",
+          "exact_match": false,
+          "cer": 0.4848
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_photo_swap_02",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "photo_swap",
+      "latency_ms": 9058.1,
+      "fields_evaluated": 6,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 66.67,
+      "doc_avg_cer": 0.2475,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "DEL9876543",
+          "extracted": "DEL9876543",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "NEHA BANSAL",
+          "extracted": "NEHA BANSAL",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "OM BANSAL",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "11/03/1992",
+          "extracted": "11/03/1992",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "C-5 Rohini Sector 9, Delhi 110085",
+          "extracted": "C-5 Rohini Sector",
+          "exact_match": false,
+          "cer": 0.4848
+        }
+      }
+    },
+    {
+      "id": "voter_clean_03",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9236.5,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.2885,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "MAH4567890",
+          "extracted": "MAH4567890",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SACHIN DESHMUKH",
+          "extracted": "ASHOK DESHMUKH",
+          "exact_match": false,
+          "cer": 0.2667
+        },
+        "father_name": {
+          "ground_truth": "ASHOK DESHMUKH",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "16/07/1987",
+          "extracted": "16/07/1987",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Plot 22 Kothrud, Pune 411038",
+          "extracted": "Plot 22 Kothrud;",
+          "exact_match": false,
+          "cer": 0.4643
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_text_edit_03",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "latency_ms": 8914.7,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.3586,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "MAH4567890",
+          "extracted": "MAH4567890",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "KAPIL DEV SHARMA",
+          "extracted": "ASHOK DESHMUKH",
+          "exact_match": false,
+          "cer": 0.6875
+        },
+        "father_name": {
+          "ground_truth": "ASHOK DESHMUKH",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "16/07/1987",
+          "extracted": "16/07/1987",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "Plot 22 Kothrud, Pune 411038",
+          "extracted": "Plot 22 Kothrud;",
+          "exact_match": false,
+          "cer": 0.4643
+        }
+      }
+    },
+    {
+      "id": "voter_clean_04",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9417.8,
+      "fields_evaluated": 6,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 66.67,
+      "doc_avg_cer": 0.1709,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "KAR3210987",
+          "extracted": "KAR3210987",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "KAVYA HEGDE",
+          "extracted": "KAVYA HEGDE",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "SUBHASH HEGDE",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "09/11/1994",
+          "extracted": "09/11/1994",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "4th Cross Indiranagar, Bengaluru 560038",
+          "extracted": "4th Cross Indiranagar; Bengaluru 560038",
+          "exact_match": false,
+          "cer": 0.0256
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_text_edit_04",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "text_edit",
+      "latency_ms": 9285.4,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.3168,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "KAR3210987",
+          "extracted": "KAR3210987",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "KAPIL DEV SHARMA",
+          "extracted": "SUBHASH HEGDE",
+          "exact_match": false,
+          "cer": 0.875
+        },
+        "father_name": {
+          "ground_truth": "SUBHASH HEGDE",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "09/11/1994",
+          "extracted": "09/11/1994",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "4th Cross Indiranagar, Bengaluru 560038",
+          "extracted": "4th Cross Indiranagar; Bengaluru 560038",
+          "exact_match": false,
+          "cer": 0.0256
+        }
+      }
+    },
+    {
+      "id": "voter_clean_05",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9352.0,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.3419,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "TAM6543210",
+          "extracted": "TAM6543210",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SURESH BALAN",
+          "extracted": "GOPAL BALAN",
+          "exact_match": false,
+          "cer": 0.5
+        },
+        "father_name": {
+          "ground_truth": "GOPAL BALAN",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "28/05/1983",
+          "extracted": "28/05/1983",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "77 Anna Salai, Chennai 600002",
+          "extracted": "77 Anna Salai",
+          "exact_match": false,
+          "cer": 0.5517
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_recompression_05",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "latency_ms": 9574.3,
+      "fields_evaluated": 6,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 66.67,
+      "doc_avg_cer": 0.2586,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "TAM6543210",
+          "extracted": "TAM6543210",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SURESH BALAN",
+          "extracted": "SURESH BALAN",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "GOPAL BALAN",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "28/05/1983",
+          "extracted": "28/05/1983",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "77 Anna Salai, Chennai 600002",
+          "extracted": "77 Anna Salai",
+          "exact_match": false,
+          "cer": 0.5517
+        }
+      }
+    },
+    {
+      "id": "voter_clean_06",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8634.3,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.2468,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "GUJ7890123",
+          "extracted": "GUJ7890123",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "BHAVIK SHAH",
+          "extracted": "KIRIT SHAH",
+          "exact_match": false,
+          "cer": 0.4545
+        },
+        "father_name": {
+          "ground_truth": "KIRIT SHAH",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "14/01/1989",
+          "extracted": "14/01/1989",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "301 City Center, Surat, Gujarat 395007",
+          "extracted": "301 City Center; Surat, Gujarat 395007",
+          "exact_match": false,
+          "cer": 0.0263
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_recompression_06",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "recompression",
+      "latency_ms": 9447.6,
+      "fields_evaluated": 6,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 66.67,
+      "doc_avg_cer": 0.2369,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "GUJ7890123",
+          "extracted": "GUJ7890123",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "BHAVIK SHAH",
+          "extracted": "BHAVIK SHAH",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "KIRIT SHAH",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "14/01/1989",
+          "extracted": "14/01/1989",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "301 City Center, Surat, Gujarat 395007",
+          "extracted": "301 City Center , Surat",
+          "exact_match": false,
+          "cer": 0.4211
+        }
+      }
+    },
+    {
+      "id": "voter_clean_07",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 8816.2,
+      "fields_evaluated": 6,
+      "fields_exact_match": 3,
+      "doc_accuracy_pct": 50.0,
+      "doc_avg_cer": 0.2872,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "RAJ8901234",
+          "extracted": "RAJ8901234",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SUMAN RATHORE",
+          "extracted": "MAN SINGH",
+          "exact_match": false,
+          "cer": 0.6923
+        },
+        "father_name": {
+          "ground_truth": "MAN SINGH",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "23/06/1996",
+          "extracted": "23/06/1996",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "14 Rajput Colony, Jodhpur 342001",
+          "extracted": "14 Rajput Colony , Jodhpur 342001",
+          "exact_match": false,
+          "cer": 0.0312
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_stamp_duplicate_07",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "latency_ms": 9487.5,
+      "fields_evaluated": 6,
+      "fields_exact_match": 4,
+      "doc_accuracy_pct": 66.67,
+      "doc_avg_cer": 0.282,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "RAJ8901234",
+          "extracted": "RAJ8901234",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "SUMAN RATHORE",
+          "extracted": "MAN SINGH",
+          "exact_match": false,
+          "cer": 0.6923
+        },
+        "father_name": {
+          "ground_truth": "MAN SINGH",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Female",
+          "extracted": "Female",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "23/06/1996",
+          "extracted": "23/06/1996",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "14 Rajput Colony, Jodhpur 342001",
+          "extracted": "14 Rajput Colony, Jodhpur 342001",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "voter_clean_08",
+      "document_type": "national_id_voter",
+      "is_tampered": false,
+      "tamper_type": null,
+      "latency_ms": 9357.1,
+      "fields_evaluated": 6,
+      "fields_exact_match": 5,
+      "doc_accuracy_pct": 83.33,
+      "doc_avg_cer": 0.1667,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "UP90123456",
+          "extracted": "UP90123456",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "RAHUL MISHRA",
+          "extracted": "RAHUL MISHRA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "SATISH MISHRA",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "05/12/1985",
+          "extracted": "05/12/1985",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "88 Hazratganj, Lucknow 226001",
+          "extracted": "88 Hazratganj, Lucknow 226001",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    },
+    {
+      "id": "voter_tampered_stamp_duplicate_08",
+      "document_type": "national_id_voter",
+      "is_tampered": true,
+      "tamper_type": "stamp_duplicate",
+      "latency_ms": 9197.7,
+      "fields_evaluated": 6,
+      "fields_exact_match": 5,
+      "doc_accuracy_pct": 83.33,
+      "doc_avg_cer": 0.1667,
+      "field_comparisons": {
+        "epic_number": {
+          "ground_truth": "UP90123456",
+          "extracted": "UP90123456",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "name": {
+          "ground_truth": "RAHUL MISHRA",
+          "extracted": "RAHUL MISHRA",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "father_name": {
+          "ground_truth": "SATISH MISHRA",
+          "extracted": "",
+          "exact_match": false,
+          "cer": 1.0
+        },
+        "gender": {
+          "ground_truth": "Male",
+          "extracted": "Male",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "date_of_birth": {
+          "ground_truth": "05/12/1985",
+          "extracted": "05/12/1985",
+          "exact_match": true,
+          "cer": 0.0
+        },
+        "address": {
+          "ground_truth": "88 Hazratganj, Lucknow 226001",
+          "extracted": "88 Hazratganj, Lucknow 226001",
+          "exact_match": true,
+          "cer": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# SentinelAuth Screening System - Frontend Dockerfile
+FROM node:20-alpine AS build
+
+WORKDIR /app
+
+# Install node dependencies
+COPY package*.json ./
+RUN npm ci
+
+# Copy source code and build
+COPY . .
+RUN npm run build
+
+# Production serve stage using lightweight Nginx
+FROM nginx:alpine
+
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Expose HTTP port
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

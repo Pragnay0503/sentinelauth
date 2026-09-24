@@ -1,0 +1,290 @@
+{
+  "fields": {
+    "national_id_aadhaar": {
+      "aadhaar_number": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 87.5,
+        "parse_cer": 0.125,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "address": {
+        "n": 8,
+        "raw_char_accuracy_pct": 75.53,
+        "raw_cer": 0.245,
+        "parse_accuracy_pct": 12.5,
+        "parse_cer": 0.31,
+        "classification": "RECOGNITION FAILURE (OCR misreads chars)"
+      },
+      "date_of_birth": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.75,
+        "raw_cer": 0.013,
+        "parse_accuracy_pct": 87.5,
+        "parse_cer": 0.125,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "gender": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 100.0,
+        "parse_cer": 0.0,
+        "classification": "PASS"
+      },
+      "name": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.79,
+        "raw_cer": 0.012,
+        "parse_accuracy_pct": 75.0,
+        "parse_cer": 0.061,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      }
+    },
+    "national_id_pan": {
+      "date_of_birth": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 87.5,
+        "parse_cer": 0.125,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "father_name": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 50.0,
+        "parse_cer": 0.5,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "name": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.96,
+        "raw_cer": 0.01,
+        "parse_accuracy_pct": 50.0,
+        "parse_cer": 0.433,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "pan_number": {
+        "n": 8,
+        "raw_char_accuracy_pct": 90.0,
+        "raw_cer": 0.1,
+        "parse_accuracy_pct": 62.5,
+        "parse_cer": 0.325,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      }
+    },
+    "national_id_voter": {
+      "address": {
+        "n": 8,
+        "raw_char_accuracy_pct": 74.26,
+        "raw_cer": 0.257,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 0.688,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "date_of_birth": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.75,
+        "raw_cer": 0.013,
+        "parse_accuracy_pct": 87.5,
+        "parse_cer": 0.125,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "epic_number": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 87.5,
+        "parse_cer": 0.125,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "father_name": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.75,
+        "raw_cer": 0.013,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "gender": {
+        "n": 8,
+        "raw_char_accuracy_pct": 96.88,
+        "raw_cer": 0.031,
+        "parse_accuracy_pct": 100.0,
+        "parse_cer": 0.0,
+        "classification": "PASS"
+      },
+      "name": {
+        "n": 8,
+        "raw_char_accuracy_pct": 97.5,
+        "raw_cer": 0.025,
+        "parse_accuracy_pct": 25.0,
+        "parse_cer": 0.75,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      }
+    },
+    "passport": {
+      "date_of_birth": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.75,
+        "raw_cer": 0.013,
+        "parse_accuracy_pct": 75.0,
+        "parse_cer": 0.225,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "date_of_expiry": {
+        "n": 8,
+        "raw_char_accuracy_pct": 0.0,
+        "raw_cer": 1.0,
+        "parse_accuracy_pct": 75.0,
+        "parse_cer": 0.25,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "given_names": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 0.837,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "nationality": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 75.0,
+        "parse_cer": 0.25,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "passport_number": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 62.5,
+        "parse_cer": 0.375,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "sex": {
+        "n": 8,
+        "raw_char_accuracy_pct": 37.5,
+        "raw_cer": 0.625,
+        "parse_accuracy_pct": 25.0,
+        "parse_cer": 0.75,
+        "classification": "RECOGNITION FAILURE (OCR misreads chars)"
+      },
+      "surname": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 0.792,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      }
+    },
+    "visa": {
+      "date_of_birth": {
+        "n": 8,
+        "raw_char_accuracy_pct": 37.5,
+        "raw_cer": 0.625,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 0.675,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "date_of_expiry": {
+        "n": 8,
+        "raw_char_accuracy_pct": 97.5,
+        "raw_cer": 0.025,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "given_names": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "nationality": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "passport_number": {
+        "n": 8,
+        "raw_char_accuracy_pct": 98.61,
+        "raw_cer": 0.014,
+        "parse_accuracy_pct": 37.5,
+        "parse_cer": 0.514,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "sex": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "surname": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "CROPPING FAILURE (Template offset / missing box)"
+      },
+      "valid_from": {
+        "n": 8,
+        "raw_char_accuracy_pct": 97.5,
+        "raw_cer": 0.025,
+        "parse_accuracy_pct": 0.0,
+        "parse_cer": 1.0,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      },
+      "visa_number": {
+        "n": 8,
+        "raw_char_accuracy_pct": 100.0,
+        "raw_cer": 0.0,
+        "parse_accuracy_pct": 50.0,
+        "parse_cer": 0.5,
+        "classification": "PARSING FAILURE (OCR sees text, parser fails)"
+      }
+    }
+  },
+  "mrz": {
+    "passport": {
+      "n": 8,
+      "line1": {
+        "char_acc": 83.24,
+        "cer": 0.168,
+        "exact_pct": 62.5
+      },
+      "line2": {
+        "char_acc": 72.44,
+        "cer": 0.276,
+        "exact_pct": 0.0
+      }
+    },
+    "visa": {
+      "n": 8,
+      "line1": {
+        "char_acc": 82.39,
+        "cer": 0.176,
+        "exact_pct": 37.5
+      },
+      "line2": {
+        "char_acc": 70.74,
+        "cer": 0.293,
+        "exact_pct": 0.0
+      }
+    }
+  }
+}

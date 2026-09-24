@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinelauth-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:////app/backend/data/sentinel.db
+      - SENTINEL_ENV=production
+      - API_SECRET_KEY=sentinel_checkpoint_dev_secret_key_2026
+    volumes:
+      - sentinel-data:/app/backend/data
+      - ./backend/data/models:/app/backend/data/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # React Frontend Dashboard
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: sentinelauth-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  # Optional PostgreSQL service for production enterprise scale
+  db:
+    image: postgres:15-alpine
+    container_name: sentinelauth-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sentinel_db
+      POSTGRES_USER: sentinel_admin
+      POSTGRES_PASSWORD: sentinel_secure_password_2026
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    profiles:
+      - postgres
+
+volumes:
+  sentinel-data:
+  pgdata:
