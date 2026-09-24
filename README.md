@@ -342,6 +342,3 @@ SentinelAuth eliminates self-registration and insecure default credentials:
 | `POST` | `/api/admin/users/{user_id}/reset-password` | `admin` | Generates a new random temporary password for user and sets `must_change_password = True`. |
 | `POST` | `/api/admin/users/{user_id}/toggle-active` | `admin` | Soft-deactivates or reactivates an officer account. |
 | `POST` | `/api/admin/purge-expired` | `admin` | Manually triggers immediate document retention purge sweep. |
-
-#   s e n t i n e l a u t h  
- 
