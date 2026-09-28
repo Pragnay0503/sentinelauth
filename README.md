@@ -1,3 +1,6 @@
+# 🎥 SENTINELAUTH DEMO VIDEO UPDATE
+> **Attention SIH Evaluators:** Due to YouTube auto-removing videos containing synthetic document layouts (PII policy), our official 3-minute video presentation has been safely moved.
+> 👉 **[CLICK HERE TO WATCH THE DEMO VIDEO (https://drive.google.com/file/d/1hMUcySm3L7-tRMIZMaKWc2qNPxwakHS0/view?usp=drivesdk)]**
 # SentinelAuth: AI-Powered Fake Identity & Document Screening Platform
 
 ![SentinelAuth Security Shield](https://img.shields.io/badge/Security-Border%20Checkpoint%20Grade-red.svg)
