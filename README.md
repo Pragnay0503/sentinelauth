@@ -143,7 +143,7 @@ SentinelAuth has been rigorously verified on all 5 user-provided identity docume
 | **`aadhaar_thada_front.png`** | Aadhaar | `XXXXXX`<br>`Thada Sai Pragnay`<br>`05/03/2007`, `Male` | 0.22 (Low) | **95.42%** *(vs merged)* | **LOW (21/100)** |
 | **`aadhaar_thada_back.jpg`** | Aadhaar Back | Address: `Thada Srinivas Reddy, H.No 5-7-436...` | 0.05 (Clean) | N/A (Address card) | **LOW (10/100)** |
 | **`pan_kaja.png`** | PAN Card | `XXXXXXXXX`<br>`KAJA KARTHIKEYA REDDY`<br>Father: `KAJA SRINIVASA REDDY` | 0.18 (Low) | N/A | **LOW (18/100)** |
-| **`aadhaar_srija.png`** | Aadhaar | `4838 0779 9767`<br>`Padigela Srija`<br>`26/11/2006`, `Female` | 0.20 (Low) | **36.58%** *(Cross-check vs Thada)* | **HIGH (72/100)** *(Face Mismatch)* |
+| **`aadhaar_srija.png`** | Aadhaar | `XXXXXX`<br>`Padigela Srija`<br>`26/11/2006`, `Female` | 0.20 (Low) | **36.58%** *(Cross-check vs Thada)* | **HIGH (72/100)** *(Face Mismatch)* |
 | **Tampered Passport Vector** | Passport | `XXXX`<br>Corrupted DOB Check Digit | 0.25 | N/A | **HIGH (65/100)** *(Checksum Fail)* |
 | **Watchlist Intercept** | Passport | `XXXX` + INTERPOL Red Notice | N/A | N/A | **CRITICAL (95/100)** *(Watchlist Hit)* |
 
